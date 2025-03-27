@@ -1,4 +1,4 @@
-import Navbar from "../navbar/Navbar"
+import Navbar from "../navbar/NavBar.jsx"
 import Footer from "../footer/Footer"
 import Grilla from "../grillaElementos/Grilla";
 import { useState } from "react";

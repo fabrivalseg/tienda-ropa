@@ -1,0 +1,88 @@
+.container-deportes{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 100px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+.deporte {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    background: #e7e7e7;
+    animation: sequential 4s ease infinite;
+}
+
+@keyframes sequential {
+    /* La mayor parte del ciclo está en reposo (tarjeta en estado inicial) */
+    0%, 20% {
+        transform: scale(1.05);
+    }
+    /* Durante el 20% al 30% de su "slot", la tarjeta aparece */
+    25% {
+        transform: scale(1);
+    }
+    35% {
+        transform: scale(1);
+    }
+    /* Y luego vuelve a ocultarse hasta el final del ciclo */
+    40%, 100% {
+        transform: scale(1.05);
+    }
+  }
+  
+  /* Asignar desfases negativos para distribuir en el ciclo global */
+  .deporte:nth-child(1) {
+      animation-delay: 0s;
+  }
+  .deporte:nth-child(2) {
+      animation-delay: -3s;
+  }
+  .deporte:nth-child(3) {
+      animation-delay: -2s;
+  }
+  .deporte:nth-child(4) {
+      animation-delay: -1s;
+  }
+
+
+
+
+
+.imagen-deporte{
+    width: 200px;
+    height: 75%;
+    object-fit: cover;
+}
+
+.nombre-deporte{
+    text-align: center;
+}
+
+.deporte:hover{
+    transform: scale(1.1);
+    transition: 0.7s ease;
+    box-shadow: 0 0 20px rgb(171, 230, 247);
+}
+
+@media screen and (max-width: 1200px){
+    .container-deportes{
+        grid-template-columns: auto auto auto;
+    }   
+       
+}
+
+@media screen and (max-width: 850px){
+    .container-deportes{
+        grid-template-columns: auto auto;
+    }     
+}
+
+@media screen and (max-width: 550px){
+    .container-deportes{
+        grid-template-columns: auto;
+    }     
+    
+}
